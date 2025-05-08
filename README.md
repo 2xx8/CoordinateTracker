@@ -1,0 +1,2 @@
+# CoordinateTracker
+win系统下的桌面坐标追踪器，实时获取当前鼠标位置的坐标
