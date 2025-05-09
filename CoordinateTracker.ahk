@@ -17,6 +17,13 @@ Gui, Add, Checkbox, vTopCheck gToggleTopmost x+5, 置顶
 Gui, Show, w200 h70 NoActivate, 坐标追踪器
 WinSet, Transparent, 255, 坐标追踪器  ; 初始不透明
 
+; 窗口拖动支持
+OnMessage(0x201, "WM_LBUTTONDOWN")
+
+WM_LBUTTONDOWN() {
+    PostMessage, 0xA1, 2
+}
+
 ; 定时器初始化
 SetTimer, UpdateCoordinates, 50
 Return
